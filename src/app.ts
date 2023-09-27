@@ -1,9 +1,7 @@
 import express, { Request, Response} from 'express'
+import { router as userRouter} from './routes/user.route'
 
 const app = express()
-
-app.get('/', (req:Request, res:Response)=>{
-    res.send({msg:'Welcome!'})
-})
+app.use(userRouter)
 
 export { app }
